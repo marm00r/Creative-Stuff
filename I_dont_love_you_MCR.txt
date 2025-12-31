@@ -1,0 +1,98 @@
+//I don't love you - MCR in Strudel
+setcpm(170/4);
+
+let rev = (s) => s.room(0.4).rsize(3);
+
+$beat: s("<[[bd,cr] rd [sd,cr] rd] [[bd,cr] [bd,rd] [sd,cr] rd]>").bank("RolandTR707").gain(rand.range(0.1, 0.2)).lpf(7400).room(0.2);
+
+
+$bass:note(`< 
+[c1 c1 c1 c1]
+[c1 c1 c1 c1]
+[c1 c1 c1 c1]
+[c1 c1 c1 c1]
+
+[a1 a1 a1 a1]
+[a1 a1 a1 a1]
+[a1 a1 a1 a1]
+[a1 a1 a1 a1]
+
+[g1 g1 g1 g1]
+[g1 g1 g1 g1]
+[g1 g1 g1 g1]
+[g1 g1 g1 g1]
+
+[f1 f1 f1 f1]
+[f1 f1 f1 f1]
+[g1 g1 g1 g1]
+[g1 g1 g1 g1]
+
+ >`).sound("gm_electric_bass_pick").legato(1.5).gain(0.7)
+
+
+$guitar1:note(`< 
+  [[c4,e4] g3 [c4,e4] g3]
+  [[c4,e4] g3 [c4,e4] g3]
+  [[c4,f4] g3 [c4,f4] g3]
+  [[c4,e4] g3 [c4,e4] g3]
+
+  [[c4,e4] a3 [c4,e4] a3]
+  [[c4,e4] a3 [c4,e4] a3] 
+  [[c4,f4] a3 [c4,f4] a3]
+  [[c4,e4] a3 [c4,e4] a3]
+
+  [[c4,d4] g3 [c4,d4] g3 ]
+  [[c4,d4] g3 [c4,d4] g3 ]
+  [[b4,d4] g3 [b4,d4] g3 ]
+  [[c4,d4] g3 [c4,d4] g3 ]
+
+  [e4 g e4 g]
+  [e4 g e4 g]
+  [d4 g d4 g]
+  [c4 g b4 g]
+    >`).sound("gm_electric_guitar_clean").legato(3).apply(rev).gain(0.6);
+
+$guitar2:note(`< 
+  [[c,g,c3] [c,g,c3] [c,g,c3] [c,g,c3]]
+  [[c,g,c3] [c,g,c3] [c,g,c3] [c,g,c3]]
+  [[c,g,c3] [c,g,c3] [c,g,c3] [c,g,c3]]
+  [[c,g,c3] [c,g,c3] [c,g,c3] [c,g,c3]]
+ 
+  [[a1,e,a] [a1,e,a] [a1,e,a] [a1,e,a]]
+  [[a1,e,a] [a1,e,a] [a1,e,a] [a1,e,a]]
+  [[a1,e,a] [a1,e,a] [a1,e,a] [a1,e,a]]
+  [[a1,e,a] [a1,e,a] [a1,e,a] [a1,e,a]]
+  
+  [[g1,d,g] [g1,d,g] [g1,d,g] [g1,d,g]]
+  [[g1,d,g] [g1,d,g] [g1,d,g] [g1,d,g]]
+  [[g1,d,g] [g1,d,g] [g1,d,g] [g1,d,g]]
+  [[g1,d,g] [g1,d,g] [g1,d,g] [g1,d,g]]
+  [[f1,c,f] [f1,c,f] [f1,c,f] [f1,c,f]]
+  [[f1,c,f] [f1,c,f] [f1,c,f] [f1,c,f]]
+  [[g1,d,g] [g1,d,g] [g1,d,g] [g1,d,g]]
+
+  [f1~] 
+  >`).sound("gm_distortion_guitar").legato(2).gain(0.2).pan(0.2);
+
+
+$guitar3:note(`< 
+  [62 62 62 62 62 62 62 62]
+  [62 62 62 62 62 62 62 62]
+  [69 69 69 69 62 62 62 62]
+  [60 60 60 60 60 60 60 60]
+
+  [53 53 53 53 53 53 53 53]
+  [53 53 53 53 53 53 53 53]
+  [55 55 55 55 55 55 55 55]
+  [53 53 53 53 53 53 53 53]
+
+  [57 57 57 57 57 57 57 57]
+  [57 57 57 57 57 57 57 57]
+  [55 55 55 55 55 55 55 55]
+  [55 55 55 55 55 55 55 55]
+
+  [62 62 62 62 62 62 62 62]
+  [62 62 62 62 62 62 62 62]
+  [69 69 69 69 62 62 62 62]
+  [65 65 65 65 65 65 65 65]
+    >`).sound("gm_acoustic_guitar_nylon").apply(rev).delay(.4).pan(0.8)
